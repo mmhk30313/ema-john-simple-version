@@ -1,0 +1,20 @@
+.shop-container{
+    display: flex;
+}
+.product-container{
+    width: 65%;
+    margin-left: 100px;
+    margin-right: 10px;
+    border-right: 1px solid lightgray;
+}
+.cart-container{
+    margin: 0 auto;
+}
+.memo{
+    display: flex;
+    /* flex-flow: row; */
+    /* justify-content: space-around; */
+}
+.memo .cost{
+    text-align: right;
+}

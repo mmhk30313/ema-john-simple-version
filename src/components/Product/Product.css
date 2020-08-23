@@ -1,0 +1,21 @@
+.product{
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid lightgray;
+}
+.product .image{
+    margin: 0 10px;
+}
+.product .description h5{
+    color: blue;
+    font-weight: 400;
+}
+.product .description .addButton{
+    background-color: goldenrod;
+    margin-bottom: 20px;
+    border: 1px solid rgb(103, 83, 83);
+    border-radius: 3px;
+    padding: 5px 48px;
+    font-weight: 500;
+    cursor: pointer;
+}
