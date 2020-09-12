@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Cart = (props) => {
-    console.log(props.product);
-    const total = props.product.reduce((total, prd) => total+prd.price, 0);
+    // console.log(props.product);
+    const total = props.cart.reduce((total, pd) => total+(pd.price*pd.quantity), 0);
     let shipping = 0;
     if(total> 35){
         shipping = 0;
@@ -17,13 +17,58 @@ const Cart = (props) => {
         return Number(num.toFixed(2));
     }
     return (
-        <div className="cost">
-            <p>${formattedNum(total)}</p>
-            <p>${formattedNum(shipping)}</p>
-            <p>${formattedNum(total+shipping)}</p>
-            <p>${formattedNum(tax)}</p>
-            <h2 style={{color: "red"}}>${formattedNum(grandTotal)}</h2>
-        </div>
+        <>
+            <div className="summary" style={{textAlign: 'center'}}>
+                        <h2>Order Summery</h2>
+                        {/* <h4>Items ordered: {props.cart.length}</h4> */}
+                    </div>
+            <div className="memo">
+                <p className='des'><small>Items Ordered:</small></p>
+                <p><small>{props.cart.length}</small> </p>
+            </div>
+            <div className="memo">
+                <p className='des'><small>Products Price:</small> </p>
+                <p><small>${formattedNum(total)}</small> </p>
+            </div>
+            <div className="memo">
+                <p className='des'><small>Shipping & Handling:</small> </p>
+                <p><small>${formattedNum(shipping)}</small> </p>
+            </div>
+            <div className="memo">
+                <p className='des'><small>Total before tax:</small></p>
+                <p><small>${formattedNum(total+shipping)}</small> </p>
+            </div>
+            <div className="memo">
+                <p className='des'><small>Estimated Tax:</small></p>
+                <p><small>${formattedNum(tax)}</small></p>
+            </div>
+            <div className="memo">
+                <h3  className='des' style={{color: "red"}}>Order Total:</h3>
+                <h3 style={{color: "red"}}>${formattedNum(grandTotal)}</h3>
+            </div>
+            {
+                props.children
+            }
+            {/* <div className="link" style={{textAlign: "center",margin: "0 auto",width: "100%"}}>
+                <Link to='/review'>
+                    <button className='main-button'>Order Review</button>
+                </Link>    
+            </div> */}
+            {/* <div className="cost-des">
+                <p><small>Items:</small> </p>
+                <p><small>Shipping & Handling:</small> </p>
+                <p><small>Total before tax:</small></p>
+                <p><small>Estimated Tax:</small></p>
+                <p style={{color: "red"}}>Order Total:</p>
+            </div>
+            <div className="cost">
+                <p><small>${formattedNum(total)}</small> </p>
+                <p><small>${formattedNum(shipping)}</small> </p>
+                <p><small>${formattedNum(total+shipping)}</small> </p>
+                <p><small>${formattedNum(tax)}</small></p>
+                <p style={{color: "red"}}>${formattedNum(grandTotal)}</p>
+            </div> */}
+        </>
     );
 };
 

@@ -1,4 +1,4 @@
-.shop-container{
+.twin-container{
     display: flex;
 }
 .product-container{
@@ -13,7 +13,10 @@
 .memo{
     display: flex;
     /* flex-flow: row; */
-    /* justify-content: space-around; */
+    justify-content: space-around;
+}
+.memo .des{
+    width: 80%;
 }
 .memo .cost{
     text-align: right;
