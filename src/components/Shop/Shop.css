@@ -13,11 +13,9 @@
 .memo{
     display: flex;
     /* flex-flow: row; */
-    justify-content: space-around;
+    justify-content: space-between !important;
 }
-.memo .des{
-    width: 80%;
-}
+
 .memo .cost{
     text-align: right;
 }

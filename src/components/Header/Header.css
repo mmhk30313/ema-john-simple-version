@@ -9,17 +9,44 @@
 }
 .header nav{
     background-color: black;
-    line-height: 40px;
+    /* line-height: 30px; */
     text-align: left;
-    padding-left: 80px;
     font-size: 20px;
+    height: fit-content;
 }
-nav a{
-    text-decoration: none;
+nav .nav-link {
+    margin-left: 10%;
+}
+nav .link{
+    margin-left: 18px;
+    text-decoration: none !important;
     color: white;
-    margin-left: 10px;
-    padding: 6px;
+    padding: 10px 10px;
+    padding-bottom: 14px;
 }
-nav a:hover{
+nav .link:hover{
     background-color: gray;
+    height: 100% !important;
+    color: white;
+    border-radius: 10px;
+}
+nav .search{
+    background-color: #323233;
+    /* text-align: center; */
+    line-height: 50px;
+    height: 55px;
+    
+}
+.search input{
+    width: 70%;
+    height: 38px;
+    margin: 0 auto;
+    padding-left: 10px;
+    position: relative;
+    top: 10px;
+}
+.sign-out{
+    margin-left: 20px;
+    height: 100% !important;
+    /* padding: 8px !important; */
 }

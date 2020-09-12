@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css';
 
 const Cart = (props) => {
     // console.log(props.product);
@@ -27,12 +28,12 @@ const Cart = (props) => {
                 <p><small>{props.cart.length}</small> </p>
             </div>
             <div className="memo">
-                <p className='des'><small>Products Price:</small> </p>
-                <p><small>${formattedNum(total)}</small> </p>
+                <p className='des'><small>Products Price:</small></p>
+                <p><small>${formattedNum(total)}</small></p>
             </div>
             <div className="memo">
-                <p className='des'><small>Shipping & Handling:</small> </p>
-                <p><small>${formattedNum(shipping)}</small> </p>
+                <p className='des'><small>Shipping & Handling:</small></p>
+                <p><small>${formattedNum(shipping)}</small></p>
             </div>
             <div className="memo">
                 <p className='des'><small>Total before tax:</small></p>
@@ -43,8 +44,8 @@ const Cart = (props) => {
                 <p><small>${formattedNum(tax)}</small></p>
             </div>
             <div className="memo">
-                <h3  className='des' style={{color: "red"}}>Order Total:</h3>
-                <h3 style={{color: "red"}}>${formattedNum(grandTotal)}</h3>
+                <h6 className='des' style={{color: "red"}}>Order Total:</h6>
+                <h6 style={{color: "red"}}>${formattedNum(grandTotal)}</h6>
             </div>
             {
                 props.children
